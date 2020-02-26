@@ -60,16 +60,72 @@
               <div class="col-md-4">
                 <input id="txtName" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Name" />
               </div>
-            </div>
+            </div>  
+            
 
             <!-- The code for the remainder of the personal fields will be added here -->
 
+           
             <div class="form-group">
+              <label for="numInput" class="control-label col-md-2">Age</label>
+              <div class="col-md-2">
+                <input id="txtNum" type="text" name="numInput" class="form-control personalDetails" placeholder="Your Age" />
+              </div>
+            </div>  
+
+           
+            
+            <div class="form-group">
+              <label class="control-label col-md-2">Gender</label> 
+              <input type="radio" id="male" name="gender" value="male">
+              <label for = "male">Male</label>
+              <input type="radio" id="female" name = "gender" value="female">
+              <label for = "female">Female</label>
+            </div>
+              
+
+              
+            <div class="form-group">
+              <Label for="nameInput" class="control-label col-md-2">Town/City</Label>
               <div class="col-md-4">
-                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" />
+                <input id="txtName" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Town/City" />
+              </div>
+            </div>  
+              
+
+                
+            <div class="form-group">
+              <Label for="AddressInput" class="control-label col-md-2">Your Email Address</Label>
+              <div class="col-md-4">
+                <input id="txtAddress" type="text" name="AddressInput" class="form-control personalDetails" placeholder="Your Email Address" />
+              </div>
+            </div>  
+
+            <div class="form-group">
+              <label for="Select" class="control-label col-md-2">No claims Bonus(in years)</label>
+              <div class="col-md-4"> 
+              <select id="Select" class="form-control personalDetails"> 
+                <option value="Select">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5+">5+</option>
+              </select> 
               </div>
             </div>
 
+            
+             
+            <div class="form-group">
+              <div class="col-md-4">
+                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" /><br>
+              </div>
+            </div>
+
+
+            
+            </div>
           </form>
         </div>
       </div>
