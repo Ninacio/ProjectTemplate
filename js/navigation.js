@@ -21,8 +21,11 @@
   });
 
   function showCarDetails() {
+    $('#dvPersonalDetails').hide();
+    //$('#dvCarDetails').show();
       
     // Hide the personal details section (dvPersonalDetails)
+    
     // Hide the quote section (dvQuoteDetails)
     // Show the car details section (dvCarDetails)
 
@@ -44,7 +47,7 @@
 
     // Perform validation to test that all data has been entered
 
-    if (/* Page is Valid */)
+    if (Valid /* Page is Valid */)
     {
 
       // Get the values from the page elements that you need to create your JSON
@@ -59,7 +62,7 @@
           // Display the quote details page
       });
   }
-
+  }
 //################################# Helper Functions - look at these when validating and changing section #########################################
 
   // Use this function to "Reset" the form and hide all 3 error sections whenever you make a section transition
@@ -76,4 +79,5 @@
     $(".nav li").removeClass("active");
 
     $("#" + activeTab).addClass("active");
-  }
+    }
+  
