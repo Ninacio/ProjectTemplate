@@ -201,11 +201,15 @@
               </div>
             </div>
 
-            
+            <div class="form-group">
               <div class="col-md-4">
                 <input id="btnBack" value="Back" class="btn btn-default btn-sm btn-success" onclick="showPersonalDetails()" /><br>
               </div>
             </div>
+
+            </div>
+          </form>  
+        </div>  
       </div>
       
 
@@ -213,6 +217,36 @@
 
       <!-- WRAP Quote DETAILS FORM IN CHILD PANEL -->
       <div id="dvQuoteDetails" class="dvQuoteDetails">
+        <div id="QuoteDetailsAlert" class="alert alert-warning QuoteDetailsAlert">Error Message</div>
+        <h1>Quote Details</h1>
+        <p>Here is your Quote provided with your information.</p>
+
+        <div class="row">
+          <form class="form-horizontal">  
+            
+            <div class="form-group">
+              <label for="QuoteInput" class="control-label col-md-2">Quote: £</label>
+              <div class="col-md-2">
+                <input id="txtQuote" type="text" name="QuoteInput" class="form-control personalDetails" placeholder="Quote amount" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="APIInput" class="control-label col-md-2">API quote response value</label>
+              <div class="col-md-2">
+                <input id="txtAPI" type="text" name="APIInput" class="form-control personalDetails" placeholder="API value" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-4">
+                <input id="btnBack" value="Back" class="btn btn-default btn-sm btn-success" onclick="showCarDetails()" /><br>
+              </div>
+            </div>
+
+            
+          
+          
         <!-- The display fields for the quote will be added here -->
       </div>
 
