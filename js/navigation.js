@@ -21,26 +21,47 @@
   });
 
   function showCarDetails() {
-    $('#dvPersonalDetails').hide();
-    //$('#dvCarDetails').show();
-      
-    // Hide the personal details section (dvPersonalDetails)
     
+    
+    // Hide the personal details section (dvPersonalDetails)
+    $('#dvPersonalDetails').hide();
     // Hide the quote section (dvQuoteDetails)
+    $('#dvQuoteDetails').hide();
     // Show the car details section (dvCarDetails)
+    $('#dvCarDetails').show();
+    
+    if ($("#txtName").val() != "" && $("#txtNum").val() != "" && $("#Male").val() != "" && $("#Female").val() != "" && $("#txtTown").val() != "" && $("#txtAddress").val() != "" && $("#Select").val() != "")
+    {
+     $('#dvPersonalDetails').hide();
+     $('#dvCarDetails').show(); 
+    }
+    else
+    {
+     $('#dvPersonalDetailsAlert').show();
+      
+      
+      
+    }
 
+    
   }
 
   function showPersonalDetails() {
       // Hide the car details section (dvCarDetails)
+      $('#dvCarDetails').hide();
       // Hide the quote section (dvQuoteDetails)
+      $('#dvQuoteDetails').hide();
       // Show the personal details section (dvPersonalDetails)
+      $('#dvPersonalDetails').show();
   }
 
   function showQuoteDetails() {
       // Hide the car details section (dvCarDetails)
+      $('#dvCarDetails').hide();
       // Hide the personal details section (dvQuoteDetails)
+      $('#dvPersonalDetails').hide();
       // Show the quote section (dvPersonalDetails)
+      $('#dvQuoteDetails').show();
   }
 
   function getQuote() {

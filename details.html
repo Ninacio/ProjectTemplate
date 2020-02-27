@@ -88,7 +88,7 @@
             <div class="form-group">
               <Label for="nameInput" class="control-label col-md-2">Town/City</Label>
               <div class="col-md-4">
-                <input id="txtName" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Town/City" />
+                <input id="txtTown" type="text" name="nameInput" class="form-control personalDetails" placeholder="Your Town/City" />
               </div>
             </div>  
               
@@ -133,7 +133,82 @@
       <!-- WRAP CAR DETAILS FORM IN CHILD PANEL -->
       <div id="dvCarDetails" class="dvCarDetails">
         <!-- Code for the car details section to be added here -->
+        <div id="dvCarDetailsAlert" class="alert alert-warning CarDetailsAlert">Error Message</div>
+        <h1>Car Details</h1>
+        <p>In order to provide you with a quote, we need to know a little bit about your car.</p>
+
+        <div class="row">
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label for="Select" class="control-label col-md-2">Manufacturer</label>
+              <div class="col-md-4"> 
+              <select id="Select" class="form-control personalDetails"> 
+                <option value="Select">Select</option>
+                  <option value="Audi">Audi</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Citroen">Mini</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Volswagen">Volkwagen</option>
+              </select> 
+              </div>
+            </div>  
+            
+            <div class="form-group">
+              <Label for="ModelInput" class="control-label col-md-2">Model</Label>
+              <div class="col-md-4">
+                <input id="txtModel" type="text" name="ModelInput" class="form-control personalDetails" placeholder="Your Model" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="CarAgeInput" class="control-label col-md-2">Car Age</label>
+              <div class="col-md-2">
+                <input id="txtCarAge" type="text" name="CarAgeInput" class="form-control personalDetails" placeholder="Model Age" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <Label for="EngineInput" class="control-label col-md-2">Engine Size</Label>
+              <div class="col-md-4">
+                <input id="txtEngine" type="text" name="EngineInput" class="form-control personalDetails" placeholder="Model Engine" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="Select" class="control-label col-md-2">Manufacturer</label>
+              <div class="col-md-4"> 
+              <select id="Select" class="form-control personalDetails"> 
+                <option value="Select">Select</option>
+                  <option value="Garage">Audi</option>
+                  <option value="Driveway">BMW</option>
+                  <option value="Cul-de-sac">Cul-de-sac</option>
+                  <option value="Public Road">Public Road</option>
+              </select> 
+              </div>
+            </div>  
+
+            <div class="form-group">
+              <Label for="ValueInput" class="control-label col-md-2">Estimated Value</Label>
+              <div class="col-md-4">
+                <input id="txtValue" type="text" name="ValueInput" class="form-control personalDetails" placeholder="Model Value" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-4">
+                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showQuoteDetails()" /><br>
+              </div>
+            </div>
+
+            
+              <div class="col-md-4">
+                <input id="btnBack" value="Back" class="btn btn-default btn-sm btn-success" onclick="showPersonalDetails()" /><br>
+              </div>
+            </div>
       </div>
+      
+
 
 
       <!-- WRAP Quote DETAILS FORM IN CHILD PANEL -->
