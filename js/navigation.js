@@ -38,6 +38,7 @@
     else
     {
      $('#dvPersonalDetailsAlert').show();
+    
       
       
       
@@ -62,28 +63,42 @@
       $('#dvPersonalDetails').hide();
       // Show the quote section (dvPersonalDetails)
       $('#dvQuoteDetails').show();
-  }
+
+      if ($("#txtName").val() != "" && $("#txtNum").val() != "" && $("#Male").val() != "" && $("#Female").val() != "" && $("#txtTown").val() != "" && $("#txtAddress").val() != "" && $("#Select").val() != "")
+      {
+        getQuote()
+        $('#dvCarDetails').hide();
+        $('#dvQuoteDetails').show(); 
+       }
+       else
+       {
+        $('#dvCarDetailsAlert').show();
+       }
 
   function getQuote() {
 
     // Perform validation to test that all data has been entered
 
-    if (Valid /* Page is Valid */)
+    if (true /* Page is Valid */)
     {
 
       // Get the values from the page elements that you need to create your JSON
+      var JSON = { age : ""+$('age')+"", gender : ""+$('male')+""} 
 
       $.ajax({
-          type: "GET",
-          url: "http://localhost:53753/api/rating/CalculateRates",
-          data: { /* create JSON here */ }
+          type: "POST",
+          url: "http://localhost:53753/api/CalculateRates",
+          data: JSON
         }).done(function(msg) {
           // Put the return value into Label created on quote details
+          $('#txtQuote').text(msg.result)
+          alert(msg.result)
           // Hide the Car Details section
           // Display the quote details page
       });
   }
   }
+}
 //################################# Helper Functions - look at these when validating and changing section #########################################
 
   // Use this function to "Reset" the form and hide all 3 error sections whenever you make a section transition
@@ -101,4 +116,4 @@
 
     $("#" + activeTab).addClass("active");
     }
-  
+   

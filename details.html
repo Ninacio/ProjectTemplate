@@ -69,7 +69,7 @@
             <div class="form-group">
               <label for="numInput" class="control-label col-md-2">Age</label>
               <div class="col-md-2">
-                <input id="txtNum" type="text" name="numInput" class="form-control personalDetails" placeholder="Your Age" />
+                <input id="age" type="text" name="numInput" class="form-control personalDetails" placeholder="Your Age" />
               </div>
             </div>  
 
@@ -176,12 +176,12 @@
             </div>
 
             <div class="form-group">
-              <label for="Select" class="control-label col-md-2">Manufacturer</label>
+              <label for="Select" class="control-label col-md-2">Storage</label>
               <div class="col-md-4"> 
               <select id="Select" class="form-control personalDetails"> 
                 <option value="Select">Select</option>
-                  <option value="Garage">Audi</option>
-                  <option value="Driveway">BMW</option>
+                  <option value="Garage">Garage</option>
+                  <option value="Driveway">Driveway</option>
                   <option value="Cul-de-sac">Cul-de-sac</option>
                   <option value="Public Road">Public Road</option>
               </select> 
@@ -197,7 +197,7 @@
 
             <div class="form-group">
               <div class="col-md-4">
-                <input id="btnNext" value="Next" class="btn btn-default btn-sm btn-success" onclick="showQuoteDetails()" /><br>
+                <input id="btnNext" value="Get Quote" class="btn btn-default btn-sm btn-success" onclick="showQuoteDetails()" /><br>
               </div>
             </div>
 
@@ -225,10 +225,7 @@
           <form class="form-horizontal">  
             
             <div class="form-group">
-              <label for="QuoteInput" class="control-label col-md-2">Quote: £</label>
-              <div class="col-md-2">
-                <input id="txtQuote" type="text" name="QuoteInput" class="form-control personalDetails" placeholder="Quote amount" />
-              </div>
+              <label id="txtQuote" name="QuoteInput" class="control-label col-md-2" >Quote: £</label>
             </div>
 
             <div class="form-group">
